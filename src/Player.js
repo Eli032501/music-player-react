@@ -1,15 +1,68 @@
 import React from "react";
-import { useEffect, useState } from "react";
-import useSound from "use-sound"; // for handling the sound
-import qala from "./assets/sound1.mp3"; // importing the music
-import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai"; // icons for play and pause
-import { BiSkipNext, BiSkipPrevious } from "react-icons/bi"; // icons for next and previous track
-import { IconContext } from "react-icons"; // for customazing the icons
+import "./Player.css";
 
-export default function Payer() {
+import { useEffect, useState } from "react";
+import useSound from "use-sound";
+import music from "./assets/sound1.mp3";
+import bgimage from "./assets/bgsound.jpg";
+import {
+  SlControlStart,
+  SlControlPause,
+  SlControlPlay,
+  SlControlEnd,
+} from "react-icons/sl";
+
+import { IconContext } from "react-icons";
+
+export default function Player() {
+  const [playing, setPlaying] = useState(false);
+  const [play, { pause, duration, sound }] = useSound(music);
+
+  const playButton = () => {
+    if (playing) {
+      pause();
+      setPlaying(false);
+    } else {
+      play();
+      setPlaying(true);
+    }
+  };
+
   return (
     <div className="Player">
       <h2>music</h2>
+      <img className="musicCover" src={bgimage} />
+      <div>
+        <h3 className="title">Sunrise Sips</h3>
+        <a href="https://stocktune.com/" className="subTitle">
+          stocktune
+        </a>
+      </div>
+      <div>
+        <button className="playButton">
+          <IconContext.Provider value={{ className: "styleButton" }}>
+            <SlControlStart />
+          </IconContext.Provider>
+        </button>
+        {!playing ? (
+          <button className="playButton">
+            <IconContext.Provider value={{ className: "styleButton" }}>
+              <SlControlPlay />
+            </IconContext.Provider>
+          </button>
+        ) : (
+          <button className="playButton">
+            <IconContext.Provider value={{ className: "styleButton" }}>
+              <SlControlPause />
+            </IconContext.Provider>
+          </button>
+        )}
+        <button className="playButton">
+          <IconContext.Provider value={{ className: "styleButton" }}>
+            <SlControlEnd />
+          </IconContext.Provider>
+        </button>
+      </div>
     </div>
   );
 }
