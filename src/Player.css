@@ -1,3 +1,77 @@
+:root {
+  --corner: 10px;
+  --shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+  --color1: #f8e4d9;
+  --color2: #ebc0a9;
+  --color3: #28160c;
+  --color4: #6a310f;
+}
+
 .Player {
-  background-color: aqua;
+  margin: 0 auto;
+  padding: 16px 40px 20px;
+  box-shadow: var(--shadow);
+  width: 380px;
+  border-radius: var(--corner);
+  background-color: var(--color2);
+}
+.Player h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.Player .musicCover {
+  margin: 0;
+  height: 260px;
+}
+
+.Player .musicCover img {
+  border-radius: var(--corner);
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.Player h3 {
+  text-align: center;
+  margin: 16px 0 4px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.Player .subTitle {
+  color: var(--color4);
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 180ms ease-in-out;
+}
+.Player .subTitle:hover {
+  opacity: 0.7;
+}
+
+.Player .buttons {
+  margin: 16px auto;
+  max-width: fit-content;
+}
+.Player .playButton {
+  border: none;
+  border-radius: 6px;
+  padding: 14px;
+  background: none;
+  margin: 0 10px;
+  font-size: 26px;
+  line-height: 0;
+  transition: all 130ms ease-in-out;
+}
+.Player .styleButton {
+  color: var(--color4);
+}
+.Player .playButton:hover {
+  background-color: var(--color4);
+  cursor: pointer;
+}
+.Player .playButton:hover .styleButton {
+  color: var(--color2);
 }

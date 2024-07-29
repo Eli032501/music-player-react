@@ -30,15 +30,22 @@ export default function Player() {
 
   return (
     <div className="Player">
-      <h2>music</h2>
-      <img className="musicCover" src={bgimage} />
+      <h2>Musify</h2>
+      <figure className="musicCover">
+        <img src="https://picsum.photos/400" />
+      </figure>
       <div>
         <h3 className="title">Sunrise Sips</h3>
-        <a href="https://stocktune.com/" className="subTitle">
+        <a
+          href="https://stocktune.com/"
+          className="subTitle"
+          target="_blank"
+          rel="noreferrer"
+        >
           stocktune
         </a>
       </div>
-      <div>
+      <div className="buttons">
         <button className="playButton">
           <IconContext.Provider value={{ className: "styleButton" }}>
             <SlControlStart />
