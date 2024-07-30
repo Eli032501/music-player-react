@@ -30,7 +30,7 @@ export default function Player() {
 
   return (
     <div className="Player">
-      <h2>Musify</h2>
+      <h2>musify</h2>
       <figure className="musicCover">
         <img src="https://picsum.photos/400" />
       </figure>
