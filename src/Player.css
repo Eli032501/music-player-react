@@ -9,22 +9,23 @@
 }
 
 .Player {
-  margin: 0 auto;
-  padding: 16px 40px;
+  margin: 26px auto;
+  padding: 12px 40px;
   box-shadow: var(--shadow);
-  width: 340px;
+  max-width: 340px;
   border-radius: var(--corner);
   background-color: var(--color2);
+  border: solid var(--color5) 1.6px;
 }
 .Player h2 {
   font-size: 24px;
   font-weight: 500;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .Player .musicCover {
   margin: 0;
-  height: 260px;
+  height: 220px;
 }
 
 .Player .musicCover img {
