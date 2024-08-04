@@ -74,7 +74,18 @@ export default function Player() {
           stocktune
         </a>
       </div>
-      <div>
+      <div className="timeline">
+        <input
+          type="range"
+          min="0"
+          max={duration / 1000}
+          default="0"
+          value={seconds}
+          className="time-range"
+          onChange={(e) => {
+            sound.seek([e.target.value]);
+          }}
+        />
         <div className="time">
           <p>
             {currTime.min}:{currTime.sec}
@@ -83,17 +94,6 @@ export default function Player() {
             {timeRemain.min}:{timeRemain.sec}
           </p>
         </div>
-        <input
-          type="range"
-          min="0"
-          max={duration / 1000}
-          default="0"
-          value={seconds}
-          className="timeline"
-          onChange={(e) => {
-            sound.seek([e.target.value]);
-          }}
-        />
       </div>
 
       <div className="buttons">
