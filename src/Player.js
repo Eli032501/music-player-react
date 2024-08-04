@@ -44,6 +44,7 @@ export default function Player() {
         });
       }
     }, 1000);
+
     return () => clearInterval(interval);
   }, [sound]);
 
@@ -90,6 +91,7 @@ export default function Player() {
           <p>
             {currTime.min}:{currTime.sec}
           </p>
+
           <p>
             {timeRemain.min}:{timeRemain.sec}
           </p>

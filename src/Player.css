@@ -58,8 +58,19 @@
 }
 
 .Player .timeline {
+  margin-top: 16px;
+  width: 100%;
+  accent-color: var(--color4);
 }
-
+.Player .time {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.Player .time p {
+  margin: 0;
+  margin-top: 4px;
+}
 .Player .buttons {
   margin: 16px auto 12px;
   max-width: fit-content;
