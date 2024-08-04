@@ -57,6 +57,9 @@
   color: var(--color5);
 }
 
+.Player .timeline {
+}
+
 .Player .buttons {
   margin: 16px auto 12px;
   max-width: fit-content;
